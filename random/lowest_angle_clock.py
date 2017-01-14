@@ -6,11 +6,11 @@ def calculate_angle(hours, minutes):
     angle = (hours * 30) -  (minutes * 6)
     
     # If the hour is ahead of the 
-    if (hours * 30) <  (minutes * 6):
+    if angle < 0:
         angle = abs(angle);
         if angle > 180:
             angle  = 360 - angle
-        return angle
+
     return angle   
     
 print calculate_angle(9, 15)
