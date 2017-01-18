@@ -23,11 +23,19 @@ public class LaserMazeSolver {
         return position;
     }
 
+    public static int adventureTime(int[] start, int[] position, String[][] maze) {
+
+
+        return -1;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[][] maze = new String[MAX_ROW][NEST_COL];
         boolean first_line = true;
         int[] position = null;
+        int[] start = null;
+        int[] velocity = {1,0};
         int index = 0;
 
         while (scanner.hasNextLine()) {
@@ -37,10 +45,12 @@ public class LaserMazeSolver {
             index++;
         }
 
+        start = findStartPosition(maze);
         position = findStartPosition(maze);
-        System.out.println(position);
 
+        distance_traveled = adventureTime(start, position, maze);
 
+        System.out.println(distance_traveled);
     }
 }
  
