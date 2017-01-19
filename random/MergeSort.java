@@ -16,6 +16,10 @@ public class MergeSort {
         return arr;
       }
       return result;
+    } else {
+      int[] first = MergeSort(Arrays.copyOfRange(arr, 0, m));
+      int[] second = MergeSort(Arrays.copyOfRange(arr, m, length));
+      result = Merge(first, second);
     }
     
     return result;
