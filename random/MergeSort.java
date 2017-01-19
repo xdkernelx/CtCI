@@ -59,15 +59,19 @@ public class MergeSort {
    
     return result;
   }
-  
+
   public static void main(String[] args) {
-    int[] data = {1,4};
-    
-    data = MergeSort(data);
-    
-    for (int e : data) {
-      System.out.println(e);
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Please enter the number of values.");
+    int n = scanner.nextInt();
+    System.out.println("Please enter the numbers in any order.");
+    int[] a = new int[n];
+    for (int i = 0; i < n; i++) {
+        a[i] = scanner.nextInt();
     }
-    
+    a = MergeSort(a);
+
+    System.out.println(Arrays.toString(a));
   }
 }
