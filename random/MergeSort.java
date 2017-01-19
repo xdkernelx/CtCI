@@ -25,6 +25,26 @@ public class MergeSort {
     return result;
   }
   
+  private static int[] Merge(int[] first, int[] second) {
+    int length = first.length + second.length;
+    int[] result = new int[length];
+    int index = 0;
+    int first_index = 0;
+    int second_index = 0;
+    
+    while (index < length) {
+      if (first[first_index] > second[second_index]) {
+        results[index] = second[second_index];
+        second_index++;
+      } else {
+        results[index] = first_index[first_index];
+        first_index++;
+      }
+      index++;
+    }
+    
+    return result;
+  }
   
   public static void main(String[] args) {
     int[] data = {1,4};
