@@ -3,6 +3,13 @@ import java.util.*;
 public class MergeSort {
   
   private static int[] MergeSort(int[] arr) {
+    /*
+      Using a divide and conquer method, we split the array
+      into two subarrays and try to solve it recursively. 
+      If the array is 1, we return the original array. If 
+      We have two, we simple check if they are already sorted.
+      If not, we swap them. 
+     */
     int length = arr.length;
     int m = length / 2;
     int[] result = new int[length];
@@ -26,6 +33,14 @@ public class MergeSort {
   }
   
   private static int[] Merge(int[] first, int[] second) {
+    /*
+      We create a new array based on the lengths of the incoming
+      arrays. We continuously compare the ordered arrays and insert
+      the lowest values first. If one of the indexes for either 
+      incoming array exceeds it's original length, we check which
+      index is the lowest and insert the remaining values of that
+      ordered array into the resultant. 
+     */
     int length = first.length + second.length;
     int[] result = new int[length];
     int index = 0;
