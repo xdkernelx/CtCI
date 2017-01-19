@@ -33,16 +33,27 @@ public class MergeSort {
     int second_index = 0;
     
     while (index < length) {
-      if (first[first_index] > second[second_index]) {
-        results[index] = second[second_index];
-        second_index++;
+      if (first_index < first.length && second_index < second.length) {
+        if (first[first_index] > second[second_index]) {
+          result[index] = second[second_index];
+          second_index++;
+        } else {
+          result[index] = first[first_index];
+          first_index++;
+        }
+      } else if (first_index < first.length) {
+        for (int i = first_index; i < first.length; i++) {
+          result[index] = first[first_index];
+        }
       } else {
-        results[index] = first_index[first_index];
-        first_index++;
+        for (int i = second_index; i < second.length; i++) {
+          result[index] = second[second_index];
+        }
       }
       index++;
     }
     
+   
     return result;
   }
   
