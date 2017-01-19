@@ -41,18 +41,21 @@ public class MergeSort {
           result[index] = first[first_index];
           first_index++;
         }
+        index++;
       } else if (first_index < first.length) {
         for (int i = first_index; i < first.length; i++) {
           result[index] = first[first_index];
+          first_index++;
+          index++;
         }
       } else {
         for (int i = second_index; i < second.length; i++) {
           result[index] = second[second_index];
+          second_index++;
+          index++;
         }
       }
-      index++;
     }
-    
    
     return result;
   }
