@@ -4,9 +4,16 @@ class AddAndMult {
     long product = 0;
     
     if (b == 0) return 0;
-    
-    for (long i = 0; i < b; i++) {
-      product = sum(product, a);    
+    if (b > 0) {
+      for (long i = 0; i < b; i++) {
+        product = sum(product, a);    
+      }
+    } else {
+      b = sum(0, -b);
+      for (long i = 0; i < b; i++) {
+        product = sum(product, a);    
+      }
+      product = sum(~product, 1);
     }
     
     
